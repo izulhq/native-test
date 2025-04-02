@@ -16,7 +16,7 @@ export default function SafeAreaWrapper({
       <StatusBar
         translucent
         backgroundColor="#3b82f6"
-        barStyle="dark-content"
+        barStyle="light-content"
       />
       <SafeAreaView style={[styles.safeArea, style]}>{children}</SafeAreaView>
     </SafeAreaProvider>

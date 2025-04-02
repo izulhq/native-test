@@ -14,16 +14,14 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "black",
+        tabBarActiveTintColor: "#3b82f6",
         tabBarInactiveTintColor: "#99a1af",
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarShowLabel: false,
         tabBarItemStyle: {
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: 5,
+          marginTop: 10,
         },
         tabBarStyle: Platform.select({
           ios: {
@@ -32,12 +30,14 @@ export default function TabLayout() {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "transparent",
+            height: 60,
           },
           default: {
-            position: "relative",
+            position: "absolute",
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "#ffffff",
+            height: 60,
           },
         }),
       }}

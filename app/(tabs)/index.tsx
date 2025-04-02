@@ -32,27 +32,33 @@ const promo = [
 const products = [
   {
     id: "1",
-    name: "Product 1",
-    price: "$10",
-    image: require("@/assets/images/adaptive-icon.png"),
+    name: "Paket 1",
+    price: "Rp 100.000",
+    image: require("@/assets/images/product-1.png"),
   },
   {
     id: "2",
-    name: "Product 2",
-    price: "$20",
-    image: require("@/assets/images/adaptive-icon.png"),
+    name: "Paket 2",
+    price: "Rp 200.000",
+    image: require("@/assets/images/product-1.png"),
   },
   {
     id: "3",
-    name: "Product 3",
-    price: "$30",
-    image: require("@/assets/images/adaptive-icon.png"),
+    name: "Paket 3",
+    price: "Rp 300.000",
+    image: require("@/assets/images/product-1.png"),
   },
   {
     id: "4",
-    name: "Product 4",
-    price: "$40",
-    image: require("@/assets/images/adaptive-icon.png"),
+    name: "Paket 4",
+    price: "Rp 450.000",
+    image: require("@/assets/images/product-1.png"),
+  },
+  {
+    id: "5",
+    name: "Paket 5",
+    price: "Rp 500.000",
+    image: require("@/assets/images/product-1.png"),
   },
 ];
 
@@ -102,6 +108,7 @@ export default function HomeScreen() {
           keyExtractor={(item) => item.id}
           horizontal
           showsHorizontalScrollIndicator={false}
+          indicatorStyle="white"
           pagingEnabled
           contentContainerStyle={styles.promoSlider}
         />
@@ -116,6 +123,7 @@ export default function HomeScreen() {
         keyExtractor={(item) => item.id}
         numColumns={2}
         contentContainerStyle={styles.productGrid}
+        showsVerticalScrollIndicator={false}
       />
     </SafeAreaWrapper>
   );
@@ -145,7 +153,8 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   promoSlider: {
-    paddingVertical: 10,
+    paddingTop: 4,
+    paddingBottom: 16,
   },
   promoCard: {
     width: width * 0.92, // 90% of screen width
@@ -162,8 +171,8 @@ const styles = StyleSheet.create({
   featuredText: {
     fontSize: 24,
     fontWeight: "bold",
-    padding: 16,
-    paddingBottom: 0,
+    paddingHorizontal: 16,
+    paddingVertical: 16,
     fontFamily: "Inter-Bold", // Apply Inter font to the featured text
   },
   productGrid: {
@@ -179,6 +188,7 @@ const styles = StyleSheet.create({
     elevation: 2,
     padding: 16,
     margin: 8,
+    marginTop: 0,
     width: "45%",
   },
   productImage: {
